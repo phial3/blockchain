@@ -5,7 +5,7 @@ import (
 	"reflect"
 	"time"
 
-	"github.com/izqui/helpers"
+	"../helpers"
 )
 
 type TransactionsQueue chan *Transaction

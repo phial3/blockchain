@@ -7,7 +7,7 @@ import (
 	"reflect"
 	"time"
 
-	"github.com/izqui/helpers"
+	"../helpers"
 )
 
 type Transaction struct {

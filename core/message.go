@@ -1,9 +1,9 @@
 package core
 
 import (
+	"../helpers"
 	"bytes"
 	"errors"
-	"github.com/izqui/helpers"
 )
 
 type Message struct {

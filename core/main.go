@@ -13,15 +13,16 @@ var Core = struct {
 
 func Start(address string) {
 
+	// TODO:
+	HOME_DIRECTORY_CONFIG := ""
 	// Setup keys
 	keypair, _ := OpenConfiguration(HOME_DIRECTORY_CONFIG)
 	if keypair == nil {
-
 		fmt.Println("Generating keypair...")
 		keypair = GenerateNewKeypair()
 		WriteConfiguration(HOME_DIRECTORY_CONFIG, keypair)
 	}
-	Core.Keypair = keypair
+	Core.Keypair = keypair.(*Keypair)
 
 	// Setup Network
 	Core.Network = SetupNetwork(address, BLOCKCHAIN_PORT)
@@ -42,6 +43,15 @@ func Start(address string) {
 			}
 		}
 	}()
+}
+
+func WriteConfiguration(config interface{}, keypair interface{}) {
+
+}
+
+func OpenConfiguration(config interface{}) (interface{}, interface{}) {
+
+	return nil, nil
 }
 
 func CreateTransaction(txt string) *Transaction {

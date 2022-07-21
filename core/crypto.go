@@ -6,8 +6,8 @@ import (
 	"crypto/rand"
 	"math/big"
 
-	"github.com/izqui/helpers"
-	"github.com/tv42/base58"
+	"../base58"
+	"../helpers"
 )
 
 // Key generation with proof of work

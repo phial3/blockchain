@@ -5,8 +5,7 @@ import (
 	"encoding/binary"
 	"reflect"
 
-	"github.com/izqui/functional"
-	"github.com/izqui/helpers"
+	"../helpers"
 )
 
 type BlockSlice []Block
@@ -120,7 +119,7 @@ func (b *Block) GenerateMerkelRoot() []byte {
 		}
 	}
 
-	ts := functional.Map(func(t Transaction) []byte { return t.Hash() }, []Transaction(*b.TransactionSlice)).([][]byte)
+	ts := helpers.Map(func(t Transaction) []byte { return t.Hash() }, []Transaction(*b.TransactionSlice)).([][]byte)
 	return merkell(ts)
 
 }

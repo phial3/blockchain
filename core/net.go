@@ -8,7 +8,7 @@ import (
 	"os"
 	"time"
 
-	"github.com/izqui/helpers"
+	"../helpers"
 )
 
 type ConnectionsQueue chan string

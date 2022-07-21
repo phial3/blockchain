@@ -3,7 +3,7 @@ package core
 import (
 	"reflect"
 
-	"github.com/izqui/helpers"
+	"../helpers"
 )
 
 var (
